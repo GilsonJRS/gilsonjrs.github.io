@@ -1,0 +1,133 @@
+/* Material Design colors */
+:root {
+    --background-color: #fafafa;
+    --text-color: #333;
+}
+
+/* Global styles */
+body {
+    font-family: "Roboto", sans-serif;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: var(--background-color);
+    font-weight: 400;
+    font-style: normal;
+}
+
+body p{
+    color: var(--text-color);
+}
+
+header {
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: var(--background-color);
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    /* Use flexbox for navigation */
+    justify-content: center;
+}
+
+nav a {
+    color: #2196F3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #BBDEFB;
+}
+
+nav a+a:before {
+    content: "●";
+    color: var(--text-color);
+    padding: 16px;
+}
+
+nav a::after {
+    padding: 16px;
+    width: 0;
+}
+
+section {
+    padding: 20px;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: left;
+}
+
+h2{
+    color: var(--text-color);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.column {
+    flex: 1;
+    display: flex;
+    /* Use flexbox for columns */
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: left;
+}
+
+.column img {
+    max-width: 100%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+p {
+    flex: 1;
+    word-wrap: break-word;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+    nav {
+        padding: 5px;
+    }
+
+    body {
+        margin-left: 5%;
+        margin-right: 5%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav {
+        padding: 5px;
+    }
+
+    .column {
+        max-width: 100%;
+    }
+
+    body {
+        margin-left: 3%;
+        margin-right: 3%;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+}
