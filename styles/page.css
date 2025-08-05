@@ -26,6 +26,12 @@ header {
     text-align: center;
 }
 
+#contact a{
+    text-decoration: none;
+    font-weight: 500;
+    color: #2196F3;
+}
+
 nav {
     background-color: var(--background-color);
     color: #333;
